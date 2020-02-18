@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>登录</title>
+    <!--Bootstrap core CSS-->
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link th:href="@{/css/signin.css}" rel="stylesheet">
+</head>
+
+<body class="text-center">
+<form class="form-signin" th:action="@{/register}">
+    <img class="mb-4" th:src="@{/img/bootstrap-solid.svg}" alt="" width="72" height="72">
+    <h1 class="h3 mb-3 font-weight-normal">请注册</h1>
+
+    <p style="color: red" th:text="${registerMsg}"></p>
+
+    <label class="sr-only">账号</label>
+    <input type="text" name="username" class="form-control" required="" autofocus="">
+
+    <label class="sr-only">密码</label>
+    <input type="password" name="password" class="form-control" required="">
+
+    <button class="btn btn-lg btn-primary btn-block" type="submit">注册</button>
+</form>
+</body>
+</html>
